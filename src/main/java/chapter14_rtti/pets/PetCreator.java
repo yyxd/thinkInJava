@@ -1,6 +1,5 @@
 package chapter14_rtti.pets;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -15,7 +14,7 @@ public abstract class PetCreator {
      * 创建随机一种宠物
      * @return 一个随机的宠物
      */
-    public Pet RandomPet(){
+    public Pet randomPet(){
         int n = random.nextInt(types().size());
         try {
             return types().get(n).newInstance();
@@ -28,7 +27,7 @@ public abstract class PetCreator {
     public Pet[] createArray(int size){
         Pet[] result = new Pet[size];
         for(int i=0;i<size;i++){
-            result[i] = RandomPet();
+            result[i] = randomPet();
         }
         return result;
     }

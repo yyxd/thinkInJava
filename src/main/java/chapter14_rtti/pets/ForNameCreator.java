@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by HinTi on 2018/12/11.
- * Goal:
+ * Goal: 使用Class.forName创建Class对象的List
  */
 public class ForNameCreator extends PetCreator {
     private static List<Class<? extends Pet>> petTypes = new ArrayList<>();
