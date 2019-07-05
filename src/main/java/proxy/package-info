@@ -1,0 +1,15 @@
+代理模式：
+静态代理：
+Hello 接口 有个方法 hello(String name)
+HelloIml 实现类 hello(String name) {System.out.println("Hello, "+name);}
+如果希望在hello()方法调用前后做一些记录处理等，可以编写一个HelloProxy 代理类，让他来实现前后的处理逻辑，调用HelloIml的方法。
+
+但是静态代理如果接口发生改变，那么实现类和代理类都需要随之改变
+
+动态代理：由JDK、CGlib 在运行时生成字节码，动态的创建一个代理类
+
+
+JDK 动态代理
+
+DynamicProxy 实现需要代理的方法，【例如打印日志，性能监控等】。
+需要传入的参数是一个接口引用[这个引用需要被初始化，也就是说指向某个实现类]，然后对所有该接口中的方法实现都进行动态代理
